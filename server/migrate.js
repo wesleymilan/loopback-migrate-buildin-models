@@ -6,21 +6,9 @@
  * @type {[type]}
  */
 
-//var dataSource = app.dataSources.cassandra;
-/*
- "cassandra": {
- "port": 9042,
- "name": "cassandra",
- "contactPoints": [
- "127.0.0.1"
- ],
- "keyspace": "apiot",
- "connector": "cassandra"
- }
- */
-
 var app = require('./server');
 
+// Change app.dataSources.mysql to your datasource before run the script
 var dataSource = app.dataSources.mysql;
 
 dataSource.automigrate('User', function(err) {
